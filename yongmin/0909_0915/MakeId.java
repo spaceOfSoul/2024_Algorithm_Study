@@ -2,7 +2,7 @@ import java.io.*;
 
 import java.util.*;
 
-public class Password {
+public class MakeId {
     public static void main(String[] args) throws IOException { 
 
         Scanner scanner = new Scanner(System.in); 
