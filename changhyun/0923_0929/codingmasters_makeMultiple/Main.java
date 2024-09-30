@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) throws IOException { 
         
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        bf.readLine();
 
         Integer[] arr = Arrays.stream(bf.readLine().split(" ")).map(Integer::parseInt).toArray(Integer[]::new);
 
