@@ -23,7 +23,9 @@ public class Main {
         int[] fibonaccifibonacci = new int[100];
         fibonaccifibonacci[0] = 1;
         fibonaccifibonacci[0] = 1;
-        for(int i=0;)
+        for(int i=0; i<100; i++){
+
+        }
 
         int tmp = 0;
 
