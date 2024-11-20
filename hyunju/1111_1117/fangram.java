@@ -6,7 +6,7 @@ import java.util.*;
 
 // don't change 'Main' class name and  'public' accessor. 
 
-public class third {
+public class fangram {
     public static void main(String[] args) throws IOException { 
 
         Scanner scanner = new Scanner(System.in); 

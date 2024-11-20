@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*; 
 
-public class second {
+public class trainAndfly {
     public static void main(String[] args) throws IOException { 
 
         Scanner scanner = new Scanner(System.in); 

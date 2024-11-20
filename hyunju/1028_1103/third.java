@@ -46,7 +46,7 @@ public class third {
 
         }
         public static void main(String[] args) {
-            third solution = new third();
+            fangram solution = new fangram();
         
         String[] id_list = {"con", "ryan"};
         String[] report = {"ryan con", "ryan con", "ryan con", "ryan con"};
