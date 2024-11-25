@@ -4,7 +4,7 @@ import java.io.*;
 public class inputSequence{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        
         int a = scanner.nextInt(); // 입력 개수 a
         int b = scanner.nextInt(); // 입력 크기 b
         String [] numbers = new String[a];
