@@ -25,6 +25,6 @@ public class cogWheel {
 
     System.out.println(aRotate);
     scanner.close();
-    
+
     }
 }

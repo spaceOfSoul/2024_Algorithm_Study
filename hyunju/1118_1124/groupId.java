@@ -42,7 +42,8 @@ public class groupId {
                        }
                    }
                }
-       
+    
+               
                // 결과 출력
                System.out.println(largestGroupId);
            }
