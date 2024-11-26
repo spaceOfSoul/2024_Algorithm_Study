@@ -1,4 +1,4 @@
-public class first {
+
     class Solution {
         public int solution(String name) {
             int answer = 0;
@@ -22,4 +22,4 @@ public class first {
             return answer + move;
         }
     }
-}
+

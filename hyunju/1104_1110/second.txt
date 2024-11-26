@@ -1,5 +1,4 @@
 import java.util.*;
-public class second {
 class Solution {
     public int solution(int[] queue1, int[] queue2) {
         int answer = -1;
@@ -43,4 +42,4 @@ class Solution {
         return answer;
     }
 }
-}
+
