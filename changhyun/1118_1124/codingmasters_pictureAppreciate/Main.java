@@ -11,10 +11,7 @@ public class Main {
             grid[i] = line.toCharArray();
         }
 
-        boolean found = false;
-
         for (int i = 0; i <= 2; i++) {
-            if (found) break;
             for (int j = 0; j <= 2; j++) {
                 int oCount = 0;
 
@@ -28,13 +25,11 @@ public class Main {
 
                 if (oCount <= 1) {
                     System.out.println("yes");
-                    found = true;
-                    break;
+                    return;
                 }
             }
         }
 
-        if (!found) 
-            System.out.print("no");
+        System.out.print("no");
     }
 }
