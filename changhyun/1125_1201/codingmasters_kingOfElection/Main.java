@@ -22,29 +22,29 @@ public class Main{
         // 내 지지자와 쟤네 지지자 사이 어딘가에 타협지점이 있음
         // => 이분 탐색? (10^9승이면 진짜 쭉 돌라는 의도는 아님. 반씩 나눠서 보는 발상이 맞을듯)
 
-        int left = me; // 내 지지자부터 시작.
-        int right = arr[arr.length - 1]; // 맨 우측 많은 제일 많은 친구부터 시작
-        int result = Integer.MAX_VALUE;
+        int left = 0;
+        int right = Integer.MAX_VALUE / 2; // 크게 크게
         int mid;
 
-        while (left <= right) {
+        while (left < right) {
             mid = (left + right) / 2;
 
             int persuaded = 0;
+            int cur = me + mid;
+
             for (int i = arr.length - 1; i >= 0; i--) {
-                if (arr[i] <= mid) break;
-                persuaded += arr[i] - mid;
+                persuaded += Math.max(0, arr[i] - cur + 1);
+                if (persuaded > mid)
+                    break;
             }
 
-            int cur = me + persuaded;
-            if (cur > mid) { // 이러면 이길거임
-                result = Math.min(result, persuaded);
-                right = mid - 1;
+            if (persuaded <= mid) {
+                right = mid;
             } else {
                 left = mid + 1;
             }
         }
         
-        System.out.print(result);
+        System.out.print(left);
     }
 }
