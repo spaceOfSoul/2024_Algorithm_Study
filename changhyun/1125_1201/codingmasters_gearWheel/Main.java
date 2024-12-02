@@ -6,7 +6,6 @@ public class Main {
         String[] inputs = br.readLine().split(" ");
         
         int A = Integer.parseInt(inputs[0]);
-        // int B = Integer.parseInt(inputs[1]);
         int C = Integer.parseInt(inputs[2]);
         
         int result = (int)Math.ceil(10.0 * C / A);
