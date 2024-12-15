@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class CM_69 {
+public class CM_69_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
