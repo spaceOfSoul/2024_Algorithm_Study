@@ -29,14 +29,10 @@ public class Poketmon {
     private static int solution(int n, int[] nums) {
 
         int P = n/2; //가져 갈 수 있는 포켓몬 수
-        int len = nums.length; // 종류의 길이
-        int answer;
         Set<Integer> setP = new HashSet<>();
         for (int p : nums) {
             setP.add(p);
         }
-
-        //answer = (setP.size() > P)  ?  P : setP.size();
         return Math.min(setP.size(), P);
     }
 

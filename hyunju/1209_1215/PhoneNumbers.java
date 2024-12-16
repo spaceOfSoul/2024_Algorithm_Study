@@ -20,7 +20,7 @@ class Solution_phone {
             for (int j = 0; j < phoneBook[i].length(); j++)
                 if (map.containsKey(phoneBook[i].substring(0, j)))
                     return false;
-
         return true;
+
     }
 }
