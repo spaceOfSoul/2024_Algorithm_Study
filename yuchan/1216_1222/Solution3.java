@@ -1,63 +1,45 @@
 import java.util.*;
+
 class Solution {
     public int solution(int[] priorities, int location) {
-        int answer = -1;
-        int k = 0;
-        Queue<Node>queue = new LinkedList<>();
-        for(int i = 0; i<priorities.length; i++)
-        {
-            queue.offer(new Node(priorities[i],i));
+        Queue<Process> queue = new LinkedList<>();
+        for (int i = 0; i < priorities.length; i++) {
+            queue.offer(new Process(priorities[i], i));
         }
-        Arrays.sort(priorities);
-        for(int i = 0; i<priorities.length; i++)
-        {
-            for(int j = i+1; j<priorities.length; j++)
-                {
-                    if(priorities[i] < priorities[j])
-                    {
-                        int temp = 0;
-                        temp = priorities[i];
-                        priorities[i] = priorities[j];
-                        priorities[j] = temp;
+
+        List<Integer> sortedPriorities = new ArrayList<>();
+        for (int priority : priorities) {
+            sortedPriorities.add(priority);
+        }
+        Collections.sort(sortedPriorities, Collections.reverseOrder());
+
+        int executeOrder = 0;
+
+        for (int priority : sortedPriorities) {
+            while (!queue.isEmpty()) {
+                Process current = queue.poll();
+                if (current.priority == priority) {
+                    executeOrder++;
+                    if (current.location == location) {
+                        return executeOrder;
                     }
-                }
-        }
-        answer = 1;
-        while(!queue.isEmpty())
-        {
-            Node node = queue.poll();
-            if(priorities[k] == node.prior)
-            {
-                if(location == node.target)
-                {
-                    System.out.println(answer);
-                    return answer;
-                }
-                else
-                {
-                    answer++;
-                    k++;
-                    
+                    break;
+                } else {
+                    queue.offer(current);
                 }
             }
-            else
-            {
-                queue.offer(new Node(node.prior,node.target));
-            }
         }
-        
-        
-        
-        return answer;
+
+        return -1;
     }
 }
 
-class Node{
-    int prior;
-    int target;
-    Node(int prior, int target)
-    {
-        this.prior = prior;
-        this.target = target;
+class Process {
+    int priority;
+    int location;
+
+    Process(int priority, int location) {
+        this.priority = priority;
+        this.location = location;
     }
 }
